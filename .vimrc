@@ -23,7 +23,6 @@ if has("win32")
   set guifont=Consolas:h10
 else
   set guifont=Consolas\ 14
-endif
 
 " remove unsightly options bars
 set guioptions-=m  "remove menu bar
@@ -33,3 +32,13 @@ set guioptions-=L  "remove left-hand scroll bar
 
 " colorscheme
 colorscheme molokai
+
+" file type detection
+if has("autocmd")
+  filetype plugin indent on
+  autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+  autocmd FileType python setlocal shiftwidth=2 softtabstop=2
+  autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2
+  autocmd FileType c setlocal cindent
+  autocmd FileType c++ setlocal cindent
+endif
