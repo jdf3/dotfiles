@@ -23,6 +23,7 @@ if has("win32")
   set guifont=Consolas:h10
 else
   set guifont=Consolas\ 14
+endif
 
 " remove unsightly options bars
 set guioptions-=m  "remove menu bar
